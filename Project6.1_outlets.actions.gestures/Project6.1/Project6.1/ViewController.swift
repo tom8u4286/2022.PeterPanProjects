@@ -92,6 +92,12 @@ class ViewController: UIViewController {
         pageControl.currentPage = imageIndex
     }
     
+    /** pageControl數值改變時所觸發的function
+     * 由於pageControl也是一個可被User點選的元件，選點點左/右側會往左/右移動。
+     * 將會設定
+     *  1.imageView的圖片
+     *  2.segmentedControl的被選擇的位置
+     */
     @IBAction func pageControlValueChanged(_ sender: UIPageControl){
         // 設定圖片
         imageView.image = UIImage(named: imageNames[pageControl.currentPage])

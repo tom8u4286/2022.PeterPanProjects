@@ -34,7 +34,7 @@
                                     <segment title="新一"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="aqQ-fR-GLU"/>
+                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="cTb-uJ-K4e"/>
                                 </connections>
                             </segmentedControl>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="jN4-ns-s0r">
@@ -63,7 +63,7 @@
                     <connections>
                         <outlet property="imageView" destination="vA0-ER-pzH" id="Gr6-x4-hJf"/>
                         <outlet property="pageControl" destination="jN4-ns-s0r" id="VDh-Zx-XZv"/>
-                        <outlet property="segmentedControl" destination="Hd5-pb-Yff" id="4kR-Kt-Ucr"/>
+                        <outlet property="segmentedControl" destination="Hd5-pb-Yff" id="4je-E2-GR7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
