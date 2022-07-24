@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21169.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project6_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vA0-ER-pzH">
+                                <rect key="frame" x="0.0" y="44" width="390" height="300"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="LRq-gc-clX"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hd5-pb-Yff">
+                                <rect key="frame" x="15" y="387" width="360" height="32"/>
+                                <segments>
+                                    <segment title="灰原"/>
+                                    <segment title="柯南"/>
+                                    <segment title="小蘭"/>
+                                    <segment title="小五郎"/>
+                                    <segment title="新一"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="aqQ-fR-GLU"/>
+                                </connections>
+                            </segmentedControl>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="jN4-ns-s0r">
+                                <rect key="frame" x="15" y="352" width="360" height="26"/>
+                                <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.86626666784286499" green="0.92629557847976685" blue="0.96278196573257446" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="pageControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="aH1-rW-jlM"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jN4-ns-s0r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="7Y0-aQ-K7S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jN4-ns-s0r" secondAttribute="trailing" constant="15" id="7Ys-Px-oCf"/>
+                            <constraint firstItem="Hd5-pb-Yff" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="82J-zh-Cww"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vA0-ER-pzH" secondAttribute="trailing" id="9Db-77-uHJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hd5-pb-Yff" secondAttribute="trailing" constant="15" id="Dvj-wu-QXJ"/>
+                            <constraint firstItem="Hd5-pb-Yff" firstAttribute="top" secondItem="jN4-ns-s0r" secondAttribute="bottom" constant="9" id="KPr-fr-BQX"/>
+                            <constraint firstItem="vA0-ER-pzH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="V4j-WC-PS5"/>
+                            <constraint firstItem="vA0-ER-pzH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zrn-By-lPd"/>
+                            <constraint firstItem="jN4-ns-s0r" firstAttribute="top" secondItem="vA0-ER-pzH" secondAttribute="bottom" constant="8" symbolic="YES" id="c26-tR-yOv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="vA0-ER-pzH" id="Gr6-x4-hJf"/>
+                        <outlet property="pageControl" destination="jN4-ns-s0r" id="VDh-Zx-XZv"/>
+                        <outlet property="segmentedControl" destination="Hd5-pb-Yff" id="4kR-Kt-Ucr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.538461538461537" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
